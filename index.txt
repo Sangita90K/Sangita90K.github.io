@@ -2,23 +2,20 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Sangita Basu Karmakar
+Sangita Basu Karmakar
+Python developer | Data Analyst Trainee
 
 Show Contacts
 
 Email
-richard@example.com
-
-Phone
-+1 (213) 352-2795
+s.basukarmakar@gmail.com
 
 Birthday
-June 23, 1982
+July 28, 1990
 
 Location
-Sacramento, California, USA
+Cambridge, United Kingdom
 
 # navbar
 
