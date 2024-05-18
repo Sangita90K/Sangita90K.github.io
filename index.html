@@ -3,66 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sangita Basu Karmakar | Data Analyst</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sangita Basu Karmakar Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="profile.jpg" alt="Sangita Basu Karmakar" class="profile-img">
-        <h1>Sangita Basu Karmakar</h1>
-        <p>Data Analyst</p>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about" class="content-section">
+    <section id="home">
+        <h1>Welcome to Sangita Basu Karmakar's Portfolio</h1>
+    </section>
+
+    <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I am Sangita Basu Karmakar, a passionate Data Analyst with experience in extracting meaningful insights from data to drive business decisions. I specialize in data visualization, statistical analysis, and database management.</p>
+        <p>Brief bio about Sangita Basu Karmakar.</p>
     </section>
 
-    <section id="skills" class="content-section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Data Analysis</li>
-            <li>Data Visualization (Tableau, Power BI)</li>
-            <li>SQL</li>
-            <li>Python</li>
-            <li>Excel</li>
-            <li>R</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="content-section">
+    <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <img src="project1.jpg" alt="Project 1">
-            <h3><a href="https://github.com/sangitabk/project1">Sales Data Analysis</a></h3>
+        <div class="filter-buttons">
+            <button onclick="filterProjects('all')">All</button>
+            <button onclick="filterProjects('category1')">Category 1</button>
+            <button onclick="filterProjects('category2')">Category 2</button>
         </div>
-        <div class="project">
-            <img src="project2.jpg" alt="Project 2">
-            <h3><a href="https://github.com/sangitabk/project2">Customer Segmentation</a></h3>
-        </div>
-        <div class="project">
-            <img src="project3.jpg" alt="Project 3">
-            <h3><a href="https://github.com/sangitabk/project3">Financial Forecasting</a></h3>
+        <div class="project-gallery">
+            <div class="project-item category1">
+                <img src="images/project1.jpg" alt="Project 1" onclick="openLightbox(this)">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="project-item category2">
+                <img src="images/project2.jpg" alt="Project 2" onclick="openLightbox(this)">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+            <!-- Add more project items as needed -->
         </div>
     </section>
 
-    <section id="contact" class="content-section">
+    <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:sangitabk@example.com">sangitabk@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sangitabk">linkedin.com/in/sangitabk</a></p>
-        <p>GitHub: <a href="https://github.com/sangitabk">github.com/sangitabk</a></p>
+        <p>Contact information and form.</p>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Sangita Basu Karmakar. All rights reserved.</p>
-    </footer>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
