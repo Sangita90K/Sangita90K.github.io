@@ -7,39 +7,55 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	 <style>
-       .gallery1 {
-   		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		width: 45em;
-		max-width: 100%;
-		margin: 0 auto 2em auto;
+     .gallery1 {
+    display: flex;
+    gap: 20px;
 }
 
-.gallery1 .from-left {
-    		-moz-transform: translateX(-14em);
-		-webkit-transform: translateX(-14em);
-		-ms-transform: translateX(-14em);
-		transform: translateX(-14em);
+.gallery1 article {
+    flex: 1;
+    box-sizing: border-box;
 }
 
-.gallery .from-right {
-		-moz-transform: translateX(14em);
-		-webkit-transform: translateX(14em);
-		-ms-transform: translateX(14em);
-		transform: translateX(14em);
+.description {
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.gallery1 .image.fit {
-    		display: block;
-		width: 100%;
+.description a {
+    color: blue;
+    text-decoration: underline;
 }
+
+#iframeContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+#iframe {
+    width: 80%;
+    height: 80%;
+}
+
+#iframeContainer button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 		 </style>
 </head>
 <body class="is-preload">
@@ -108,21 +124,31 @@
 
         <!-- Gallery -->
         <div class="gallery1">	
-		<article class="from-left">
-		    <a href="images/fulls/01.jpg" class="image fit" ><img src="images/thumbs/01.jpg" title="HR Analytics - Employee Attrition & Performance" alt="" /></a>							    
-		    <div class="from-right">
-		HR Analytics - Employee Attrition & Performance </br>
-Click <a href="https://github.com/Sangita90K/HR-Analytics---Employee-Attrition-Performance" target="_blank" rel="noopener noreferrer"><strong>here</strong></a> to know more
-		   </div>
-		</article>
-		<article class="from-right">
-			<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="_Retail Strategy and Analytics" alt="" /></a>
-			<div class="from-right">
-		Retail Strategy and Analytics </br>
-Click <a href="https://github.com/Sangita90K/Quantium_Virtual_Internship_on_Retail_Strategy_and_Analytics" target="_blank" rel="noopener noreferrer"><strong>here</strong></a> to know more
-		   </div>
-		</article>
+    <article class="from-left">
+        <a href="images/fulls/01.jpg" class="image fit" onclick="openIframe(event, 'images/fulls/01.jpg')">
+            <img src="images/thumbs/01.jpg" title="HR Analytics - Employee Attrition & Performance" alt="HR Analytics - Employee Attrition & Performance" />
+        </a>							    
+        <div class="description">
+            HR Analytics - Employee Attrition & Performance <br>
+            Click <a href="https://github.com/Sangita90K/HR-Analytics---Employee-Attrition-Performance" target="_blank" rel="noopener noreferrer"><strong>here</strong></a> to know more
         </div>
+    </article>
+    <article class="from-right">
+        <a href="images/fulls/02.jpg" class="image fit" onclick="openIframe(event, 'images/fulls/02.jpg')">
+            <img src="images/thumbs/02.jpg" title="Retail Strategy and Analytics" alt="Retail Strategy and Analytics" />
+        </a>
+        <div class="description">
+            Retail Strategy and Analytics <br>
+            Click <a href="https://github.com/Sangita90K/Quantium_Virtual_Internship_on_Retail_Strategy_and_Analytics" target="_blank" rel="noopener noreferrer"><strong>here</strong></a> to know more
+        </div>
+    </article>
+</div>
+
+<!-- Iframe container -->
+<div id="iframeContainer" style="display:none;">
+    <iframe id="iframe" src="" frameborder="0"></iframe>
+    <button onclick="closeIframe()">Close</button>
+</div>
     </div>
     <a href="#contact" class="button style2 down anchored">Next</a>
 </section>
