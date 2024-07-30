@@ -55,24 +55,22 @@
     font-size: 16px;
     cursor: pointer;
 }
-		 @media screen and (max-width: 480px) {
 
-			.gallery1 {
-				-moz-flex-wrap: nowrap;
-				-webkit-flex-wrap: nowrap;
-				-ms-flex-wrap: nowrap;
-				flex-wrap: nowrap;
-				-moz-flex-direction: column;
-				-webkit-flex-direction: column;
-				-ms-flex-direction: column;
-				flex-direction: column;
-			}
-
-				.gallery1 article {
-					width: 100%;
-				}
-
-		 </style>
+	</style>
+	<script>
+        function preventAction(event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        
+        window.onload = function() {
+            // Attach the preventAction function to all links with class 'image fit'
+            var links = document.querySelectorAll('a.image.fit');
+            links.forEach(function(link) {
+                link.addEventListener('click', preventAction);
+            });
+        }
+    </script>
 </head>
 <body class="is-preload">
 
