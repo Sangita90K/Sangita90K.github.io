@@ -74,12 +74,25 @@
 
 				<!-- Gallery -->
 				<div class="gallery">
-    	<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="HR Analytics - Employee Attrition & Performance- This project focuses on analyzing employee attrition and performance metrics to provide insights into HR management. You may view my work on GitHub <a href="https://github.com/Sangita90K/HR-Analytics---Employee-Attrition-Performance" target="_blank" rel="noopener noreferrer">here</a>" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="_Retail Strategy and Analytics" alt="" /></a>
-							</article>
+							<article class="from-left">
+    <a href="images/fulls/01.jpg" class="image fit" onclick="toggleDescription(event, 'desc-01')">
+        <img src="images/thumbs/01.jpg" title="HR Analytics - Employee Attrition & Performance" alt="HR Analytics - Employee Attrition & Performance" />
+    </a>
+    <div id="desc-01" class="description" style="display: none;">
+        <strong>HR Analytics - Employee Attrition & Performance</strong>
+        <p>This project focuses on analyzing employee attrition and performance metrics to provide insights into HR management.</p>
+    </div>
+</article>
+
+<article class="from-right">
+    <a href="images/fulls/02.jpg" class="image fit" onclick="toggleDescription(event, 'desc-02')">
+        <img src="images/thumbs/02.jpg" title="_Retail Strategy and Analytics" alt="_Retail Strategy and Analytics" />
+    </a>
+    <div id="desc-02" class="description" style="display: none;">
+        <strong>Retail Strategy and Analytics</strong>
+        <p>This project explores retail strategies and analytics to optimize sales and inventory management.</p>
+    </div>
+</article>
 				</div>
 			</div>
 		</section>
