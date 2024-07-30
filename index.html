@@ -7,15 +7,36 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	 <style>
-        .from-left {
-            display: inline-block;
-            width: 100%;
-        }
+       .gallery1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-        .image.fit {
-            display: block;
-            width: 100%;
-        }
+.gallery1 .from-left, .gallery .from-right {
+    flex: 1 1 calc(50% - 20px); /* Adjust to fit two items per row with a gap */
+    box-sizing: border-box;
+}
+
+.gallery1 .image.fit {
+    width: 100%;
+}
+
+.gallery1 .description {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    background-color: #f9f9f9; /* Optional: Background color for better visibility */
+    border-top: 1px solid #ccc; /* Optional: Top border for separation */
+    box-sizing: border-box;
+}
+
+.gallery1 .description a {
+    color: blue;
+    text-decoration: underline;
+}
+
 		 </style>
 </head>
 <body class="is-preload">
@@ -83,7 +104,7 @@
         </header>
 
         <!-- Gallery -->
-        <div class="gallery">	
+        <div class="gallery1">	
 		<article class="from-left">
 		    <a href="images/fulls/01.jpg" class="image fit" ><img src="images/thumbs/01.jpg" title="HR Analytics - Employee Attrition & Performance" alt="" /></a>							    
 		    <div class="from-right">
